@@ -1,11 +1,109 @@
 @import "_normalize";
 @import "_variables";
-
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap");
 
 html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
+}
+
+body {
+  background-color: #2c2141;
+}
+
+.main {
+  width: 50%;
+  margin: auto;
+  margin-top: 10vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+  @media screen and (max-width: 1200px) {
+    width: 80%;
+  }
+  @media screen and (max-width: 640px) {
+    width: 90%;
+  }
+}
+
+.notes {
+  background-color: white;
+  height: 100%;
+  border: 2px solid #a1a4b1;
+  border-radius: 10px;
+  margin-right: 16px;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin-top:0;
+    
+  }
+
+  &__list-item {
+    font-family: "Open Sans";
+    padding: 4px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #a1a4b1;
+    }
+  }
+}
+
+.editor {
+  &__header {
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 64px;
+    margin-top: 0px;
+    margin-bottom: 24px;
+  }
+
+  &__textarea {
+    display: block;
+    width: 100%;
+    margin-top: 0px;
+    max-height: 30vh;
+    resize: none;
+    outline: none;
+    border: 2px solid #a1a4b1;
+    border-radius: 10px;
+    padding: 16px;
+    font-family: "Open Sans";
+  }
+
+  &__button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 24px;
+  }
+
+  &__button {
+    padding: 8px 40px;
+    color: white;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+    border: none;
+    border-radius: 5px;
+
+    &--save {
+      background-color: #2b823a;
+      margin-right: 16px;
+    }
+    &--clear {
+      background-color: #7a1420;
+    }
+  }
 }
