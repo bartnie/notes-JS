@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My notes</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <main class="main">
+      <section class="notes">
+        <ul class="notes__list notes__list--js">
+          <li class="notes__list-item">content of note</li>
+          <li class="notes__list-item">content of note</li>
+          <li class="notes__list-item">content of note</li>
+        </ul>
+      </section>
+      <section class="editor">
+        <h2 class="editor__header">My notes</h2>
+        <textarea
+          class="editor__textarea editor__textarea--js"
+          rows="15"
+          placeholder="Enter note here"
+        ></textarea>
+        <div class="editor__button-container">
+          <button
+            class="editor__button editor__button--save editor__button--save-js"
+          >
+            save
+          </button>
+          <button
+            class="editor__button editor__button--clear editor__button--clear-js"
+          >
+            clear
+          </button>
+        </div>
+      </section>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
+</html>
